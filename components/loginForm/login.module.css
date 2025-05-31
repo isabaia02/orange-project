@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #F9F9F9;
+  background-image: url('/bg.jpg');
+  background-position: right center; 
+  background-size: contain; 
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+  
+.formSection {
+  padding: 2rem;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 746px;
+  width: 100%;
+  max-width: 400px;
+  margin-left: 180px;
+  margin-right: 80px;
+  margin-top: 49px;
+  margin-bottom: 229px;
+  z-index: 10;
+}
+  
+.logo {
+    text-align: left;
+    margin-top: 7%;
+    margin-bottom: 24px;
+  }
+  
+  .inputWrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .label{
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    display: block;
+    font-size: 14px;
+  }
+
+  .inputWrapper input {
+    width: 100%;
+    padding: 12px 0px;
+    margin-top: 1%;
+    margin-right: 9%;
+    border: 1px solid #4A4A4A;
+    font-size: 1rem;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .checkbox {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .forgot {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .loginButton {
+    background: linear-gradient(to right, #AE23A9, #DC4E1B);
+    color: white;
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .divider span {
+    position: relative;
+    padding: 0 1rem;
+    color: #666;
+  }
+
+  .divider span::before,
+  .divider span::after {
+    content: "";
+    flex: 1;
+    height: 5px;
+    background-color: black;
+    position: relative;
+    top: 50%;
+  }
+
+
+  .registerButton {
+    padding: 1rem;
+    border: 1px solid #999;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .imageSection {
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .errorMessage {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    margin-left: 4px;
+  }
+
+  .terms {
+    margin-top: 2rem;
+    font-size: 14px;
+    color: #4A4A4A;
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    font-family: var(font-family);
+  }
+
+  .terms a{
+  text-decoration: none;
+  }
+  
+  .terms a:hover {
+    text-decoration: underline;
+  }
