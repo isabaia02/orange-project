@@ -1,8 +1,8 @@
+'use client'
 import { useState } from "react";
 import Image from 'next/image';
 import Cards from './Cards';
 import styles from './main.modules.css';
-import logo from '../public/logo.png';
 
 const MainPage = () => {
     const [chooseCollection, setChooseCollection] = useState('foods');
@@ -12,7 +12,7 @@ const MainPage = () => {
             <header className={styles.header}>
                 <div className={styles.headerContent}>
                     <Image
-                        src={logo}
+                        src={'/logo.png'}
                         alt="Orange Logo"
                         width={200}
                         height={40}

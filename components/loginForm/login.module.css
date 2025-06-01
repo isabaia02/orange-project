@@ -1,6 +1,6 @@
 .mainContainer {
   display: flex;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: #F9F9F9;
   background-image: url('/bg.jpg');
@@ -10,16 +10,16 @@
   background-repeat: no-repeat;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 300px;
+  padding-left: 120px;
 }
   
-.formSection {
+.formContainer {
   display: flex;
   position: relative;
   width: 100%;
-  max-width: 400px;
+  align-items: flex-start;
+  max-width: 430px;
   flex-direction: column;
-  align-items: center;
   z-index: 10;
   background-color: #FFFFFF;
   border-radius: 3px;
@@ -27,6 +27,15 @@
   gap: 16px;
   /*box shadow*/
 }
+
+.formSection{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: auto;
+} 
 
 .logo {
   /*text-align: left;
@@ -39,6 +48,7 @@
   font-size: 0.9rem;
   color: #4A4A4A;
   margin-bottom: 5px;
+  align-items: last baseline;
   display: block;
 }
 
@@ -49,8 +59,7 @@
 
 .inputWrapper input {
   width: 100%;
-  padding: 12px 15px;
-  padding-right: 40px;
+  padding: 12px;
   font-size: 1rem;
   /* margin-top: 1%;
   margin-right: 9%; 

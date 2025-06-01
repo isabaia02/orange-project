@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     const newErrors = {};
 
-    if(!email.trim()) newErorrs.email = 'Por favor, digite o email.';
+    if(!email.trim()) newErrors.email = 'Por favor, digite o email.';
     if(!password.trim()) newErrors.password = 'Por favor, digite a senha.';
 
     if(Object.keys(newErrors).length > 0) {
@@ -41,6 +41,7 @@ const Login = () => {
 
   return (
     <div className={styles.mainContainer}>
+      <div className={styles.formContainer}>
         <div className={styles.logo}> 
           <Image
             src="/logo.png"
@@ -51,7 +52,7 @@ const Login = () => {
         </div>
 
         <form onSubmit={handleSubmit} style={{width: '100%'}}>
-          <div className={style.formSection}>
+          <div className={styles.formSection}>
             <label htmlFor="email" className={styles.label}>Email</label>
             <div className={styles.inputWrapper}>
               <input 
@@ -122,6 +123,7 @@ const Login = () => {
           <a href="#">Termos de uso</a> • <a href="#">Política de privacidade</a>
         </div>
       </div>
+    </div>
   );
 }
 
