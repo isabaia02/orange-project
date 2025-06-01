@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --background: #F9F9F9;
+  --foreground: #171717;
+  --card-background: #ffffff;
+  --font-family: 'Open Sans', sans-serif;
+}

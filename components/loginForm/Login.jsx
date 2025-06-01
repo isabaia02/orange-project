@@ -23,8 +23,8 @@ const Login = () => {
     e.preventDefault();
     const newErrors = {};
 
-    if(!email.trim()) newErorrs.email('Por favor, digite o email.')
-    if(!password.trim()) newErrors.password('Por favor, digite a senha.')
+    if(!email.trim()) newErorrs.email = 'Por favor, digite o email.';
+    if(!password.trim()) newErrors.password = 'Por favor, digite a senha.';
 
     if(Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -33,15 +33,14 @@ const Login = () => {
 
     try{
       await login(email, password);
-      router.push('./main/page')
+      router.push('/main')
     } catch (err) {
       setErrors({password:'Usuário ou senha inválidos'});
     }
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.formSection}>
+    <div className={styles.mainContainer}>
         <div className={styles.logo}> 
           <Image
             src="/logo.png"
@@ -52,49 +51,50 @@ const Login = () => {
         </div>
 
         <form onSubmit={handleSubmit} style={{width: '100%'}}>
-          <label htmlFor="email" className={styles.label}>Email</label>
-          <div className={styles.inputWrapper}>
-            <input 
-              type="email" 
-              id="email"
-              placeholder="nome@email.com" 
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <span className={styles.icon}>
-              <Image
-                src="/mail.png"
-                alt="Ícone de e-mail"
-                width={20}
-                height={20}
+          <div className={style.formSection}>
+            <label htmlFor="email" className={styles.label}>Email</label>
+            <div className={styles.inputWrapper}>
+              <input 
+                type="email" 
+                id="email"
+                placeholder="nome@email.com" 
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-            </span>
-          </div>
-          {errors.email && <p className={styles.errorMessage}>{errors.email}</p>}
+              <span className={styles.icon}>
+                <Image
+                  src="/mail.png"
+                  alt="Ícone de e-mail"
+                  width={20}
+                  height={20}
+                />
+              </span>
+            </div>
+            {errors.email && <p className={styles.errorMessage}>{errors.email}</p>}
 
-          <label htmlFor="password" className={styles.label}>Password</label>
-          <div className={styles.inputWrapper}>
-            <input 
-              type={showPassword ? 'text' : 'password'}
-              id="password" 
-              placeholder="Password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <span className={styles.icon}>
-              <Image
-                src="/lock.png"
-                alt="Ícone de cadeado"
-                width={20}
-                height={20}
+            <label htmlFor="password" className={styles.label}>Password</label>
+            <div className={styles.inputWrapper}>
+              <input 
+                type={showPassword ? 'text' : 'password'}
+                id="password" 
+                placeholder="Password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
-            </span>
+              <span className={styles.icon}>
+                <Image
+                  src="/lock.png"
+                  alt="Ícone de cadeado"
+                  width={20}
+                  height={20}
+                />
+              </span>
+            </div>
+            {errors.password && <p className={styles.errorMessage}>{errors.password}</p>}
           </div>
-          {errors.password && <p className={styles.errorMessage}>{errors.password}</p>}
 
-        
           <div className={styles.checkbox}>
             <input 
               type="checkbox" 
@@ -102,7 +102,7 @@ const Login = () => {
               checked={showPassword}
               onChange={hTogglePassword} 
             />
-            <label htmlFor="showPassword">Mostrar a senha.</label>
+            <label htmlFor="showPassword" className={styles.labelCheck}>Mostrar a senha.</label>
           </div>
 
           <p className={styles.forgot}>Problemas para acessar sua conta?</p>
@@ -122,7 +122,6 @@ const Login = () => {
           <a href="#">Termos de uso</a> • <a href="#">Política de privacidade</a>
         </div>
       </div>
-    </div>
   );
 }
 
