@@ -1,9 +1,9 @@
-import Card from "../../components/mainPage/Cards";
+import MainPage from "../../components/mainPage/MainPage";
 import React from 'react'
 
 
-export default function MainPage() {
+export default function Page() {
     return (
-        <Main/>
+        <MainPage/>
     )
 }

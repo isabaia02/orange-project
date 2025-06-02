@@ -33,7 +33,7 @@ const Login = () => {
 
     try{
       await login(email, password);
-      router.push('/main')
+      router.push('/mainPage')
     } catch (err) {
       setErrors({password:'Usuário ou senha inválidos'});
     }

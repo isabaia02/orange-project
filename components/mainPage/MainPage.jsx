@@ -41,7 +41,7 @@ const MainPage = () => {
             </header>
 
             <main>
-                <Cards section={chooseCollection}/>
+                <Cards collection={chooseCollection}/>
             </main>
         </>
     );
