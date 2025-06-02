@@ -2,23 +2,23 @@
 import { useState } from "react";
 import Image from 'next/image';
 import Cards from './Cards';
-import styles from './main.modules.css';
+import styles from './mainPage.module.css';
 
 const MainPage = () => {
     const [chooseCollection, setChooseCollection] = useState('foods');
 
     return (
         <>
-            <header className={styles.header}>
-                <div className={styles.headerContent}>
-                    <Image
-                        src={'/logo.png'}
-                        alt="Orange Logo"
-                        width={200}
-                        height={40}
-                    />
-                    <nav className={styles.navItems}>
-                        <button
+            <div className={styles.container}>
+                <header className={styles.header}>
+                        <Image className={styles.logo}
+                            src={'/logo.png'}
+                            alt="Orange Logo"
+                            width={230}
+                            height={44}
+                        />
+                        <div className={styles.navItems}>
+                            <button
                             onClick={() => setChooseCollection('foods')}
                             className={`${styles.navItem} ${chooseCollection === 'foods' ? styles.navItemActive : ''}`} 
                         >
@@ -36,13 +36,13 @@ const MainPage = () => {
                         >
                             PLACES
                         </button>
-                    </nav>
-                </div>
-            </header>
+                        </div>
+                </header>
 
-            <main>
-                <Cards collection={chooseCollection}/>
-            </main>
+                <main>
+                    <Cards collection={chooseCollection}/>
+                </main>
+            </div>
         </>
     );
 }

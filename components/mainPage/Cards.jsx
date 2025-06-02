@@ -55,7 +55,7 @@ const Cards = ({ collection }) => {
       <span className={styles.dividerText}>List of {collection}</span>
     </div>
     <div className={styles.cardContainer}>
-      {items.map((item) => (
+      {[...items].reverse().map((item) => (
         <div key={item.id} className={styles.card}>
           {item.link && (
             <img

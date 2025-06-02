@@ -25,7 +25,6 @@
   border-radius: 3px;
   padding: 32px;
   gap: 16px;
-  /*box shadow*/
 }
 
 .formSection{
@@ -38,8 +37,6 @@
 } 
 
 .logo {
-  /*text-align: left;
-  margin-top: 7%;*/
   margin-bottom: 24px;
 }
 
@@ -116,7 +113,6 @@
   font-size: 1rem;
   margin-top: 20px;
   cursor: pointer;
-  /*border radius*/
 }
   
 .divider {

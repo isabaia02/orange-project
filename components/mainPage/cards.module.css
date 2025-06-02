@@ -1,6 +1,6 @@
 .dividerContainer{
     width: 100%;
-    max-width: 1000px;
+    max-width: 980px;
     margin: 60px auto 20px;
     position: relative;
 }
@@ -55,4 +55,5 @@
     bottom: 10px;
     border-radius: 4px;
     pointer-events: none;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
 }
